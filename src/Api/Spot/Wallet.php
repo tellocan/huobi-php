@@ -70,4 +70,14 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
+
+     /**
+     *GET /v1/query/deposit-withdraw
+     * */
+    public function getClientOrderId(array $data=[]){
+        $this->type='GET';
+        $this->path='/v1/query/withdraw/client-order-id';
+        $this->data=$data;
+        return $this->exec();
+    }
 }
